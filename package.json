@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+
   },
   "repository": {
     "type": "git",
@@ -18,5 +23,9 @@
   "homepage": "https://github.com/fabsanjuan/Profile#readme",
   "dependencies": {
     "three": "^0.162.0"
+  },
+  "devDependencies": {
+    "vite": "^5.2.2",
+    "vite-plugin-string": "^1.2.3"
   }
 }

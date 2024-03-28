@@ -10,8 +10,7 @@
 
 /*---------------------Testing background setup.-------------------------*/
 #scene-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: skyblue;
+    padding: 1rem 0;
+    width: 100vw;
+    height: 100vh;
 }
