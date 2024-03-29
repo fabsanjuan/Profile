@@ -1,10 +1,27 @@
 /*---------------------Generic Styles-------------------------*/
+/* N/A */
+/*---------------------Heading / Navbar-------------------------*/
+#nav-center-logo {
+    margin-left: -8.5rem;
+}
 
 /*---------------------Main Styles-------------------------*/
 #about-me-container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
 }
+
+#about-me-container img {
+    width: 100%;
+}
+.about-me-items {
+    margin-left: 3rem;
+}
+#about-me-container h2 {
+    margin-top: 10rem;
+}
+#about-me-container h3 {}
+#about-me-container p {}
 
 #work-experience-container {
     display: flex;
