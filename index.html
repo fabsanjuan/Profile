@@ -4,18 +4,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fabio Sanjuan</title>
-        <link rel="stylesheet" href="./src/css/global-style.css" type="text/css"> <!--TODO: Link styles and fonts.-->
+        <link rel="stylesheet" href="./src/css/global-style.css" type="text/css">
+        <link rel="stylesheet" media="(min-width: 900px)" href="./src/css/large-style.css" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
         <script type="module" src="./src/js/index.js"></script>  <!--TODO: create js components.-->
+        <script src="./src/js/interactivity.js" defer></script>
     </head>
     <body>
-        <header>  <!--TODO: Sticky and transparent to translucent transition.-->
-            <nav>  <!--TODO: Page links and logo/name.-->
-                <ul>
-                    <li><a>About</a></li>
-                    <li><a>Work</a></li>
-                    <li><a>Experience</a></li>
-                    <li><a>Logo</a></li>
-                    <li><a>Contact</a></li>
+        <header class="fixed-top hidden-nav-background">  <!--TODO: Sticky and transparent to translucent transition.-->
+            <nav id="nav-container" class=" hidden-nav-background">  <!--TODO: Page links and logo/name.-->
+                <ul id="nav-li-container" class=" hidden-nav-background">
+                    <li class="nav-left-li hidden-nav-background"><a class="nav-links hidden-nav-background" >About</a></li>
+                    <li class="nav-left-li hidden-nav-background"><a class="nav-links hidden-nav-background">Work</a></li>
+                    <li class="nav-left-li hidden-nav-background"><a class="nav-links hidden-nav-background">Experience</a></li>
+                    <li id="nav-center-logo" class="hidden-nav-background"><a id="logo" class="nav-links hidden-nav-background">Design Studios</a></li>
+                    <li id="nav-right-li" class="hidden-nav-background"><a class="nav-links hidden-nav-background">Say Hi</a></li>
                 </ul>
                 <div id="hamburger-menu">
                     <span id="hamburger-line1"></span>
