@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         let scrollPosition = window.scrollY;
         let windowHeight = window.innerHeight;
 
-        let alpha = Math.min(scrollPosition / windowHeight, 0.3);
+        let alpha = Math.min(scrollPosition / windowHeight, 0.4);
         console.log(alpha);
         navBackground.style.background = `rgba(6, 9, 24, ${alpha})`;
     })

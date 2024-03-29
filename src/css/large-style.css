@@ -1,0 +1,30 @@
+/*---------------------Generic Styles-------------------------*/
+
+/*---------------------Main Styles-------------------------*/
+#about-me-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#work-experience-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#learning-certs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-me-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+form {
+    padding: 5rem;
+}

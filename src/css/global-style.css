@@ -74,8 +74,8 @@ nav ul li {
 }
 
 .nav-left-li a:hover::after, .nav-left-li a:focus::after, .nav-left-li a:active::after {
-    width: 100%;
-    left: 0;
+    width: 75%;
+    left: 10%;
     transform: translateX(0%);
 }
 
@@ -108,4 +108,8 @@ nav ul li {
 #nav-right-li a:hover {
     color: rgb(6, 9, 24);
     transition: ease-in 0.4s;
+}
+/*---------------------Main Styles-------------------------*/
+#landing-page-overlay {
+    display: none;
 }
