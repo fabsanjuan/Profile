@@ -11,19 +11,21 @@
     grid-template-columns: 1fr 1fr;
 }
 
-#about-me-container img {
-    width: 100%;
-}
-.about-me-items {
-    margin-left: 3rem;
-}
 #about-me-container h2 {
-    margin-top: 10rem;
+    margin: 33% 3rem 2rem;
 }
-#about-me-container h3 {}
-#about-me-container p {}
+
+#about-me-container h3 {
+    font-size: 2rem;
+    margin-left: 5rem;
+}
+
+#about-me-container p {
+    margin: 1rem 5rem 0;
+}
 
 #work-experience-container {
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -2,7 +2,15 @@
 
 /*---------------------Heading / Navbar-------------------------*/
 #nav-center-logo {
-    margin-left: 5rem;
+    margin-left: 4rem;
+}
+
+#logo {
+    font-size: 0.9rem;
+}
+
+#nav-right-li a {
+    font-size: 0.675rem;
 }
 
 /* hamburger menu styling */
@@ -20,12 +28,16 @@
 
 #hamburger-menu span {
     display: block;
-    width: 2rem;
+    width: 1.5rem;
     background: white;
-    padding: 0.12rem 0;
-    margin: 0.1rem 0.5rem;
+    padding: 0.05rem 0;
+    margin: 0.15rem 0.5rem;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     border-radius: 20px;
+}
+
+#hamburger-menu.active {
+    padding: 0.5rem;
 }
 
 #hamburger-line1.active {
@@ -62,9 +74,8 @@
 .nav-left-li.active a {
     padding: 1rem;
     margin: 0.5rem;
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
-
 
 #menu-overlay {
     position: fixed;
@@ -79,4 +90,28 @@
 
 #menu-overlay.active {
     display: block;
+}
+
+/*---------------------Main Styles-------------------------*/
+#about-me-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#about-me-container h2 {
+    margin: 25% 1.5rem 3rem;
+    font-size: 0.8rem;
+}
+
+#about-me-container h3 {
+    font-size: 1.4rem;
+    margin-left: 3rem;
+}
+
+#about-me-container p {
+    margin: 1.2rem 3rem 1rem;
+}
+
+#work-experience-container {
+    
 }

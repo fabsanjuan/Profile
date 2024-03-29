@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     color: white;
     background: #181825;
@@ -16,6 +16,7 @@ ul {
 
 a {
     cursor: pointer;
+    text-decoration: none;
 }
 
 /*---------------------3D Scene Setup.-------------------------*/
@@ -27,7 +28,7 @@ a {
 /*---------------------Heading / Navbar-------------------------*/
 .fixed-top {
     position: fixed;
-    top: 5%;
+    top: 3%;
     left: 5%;
     width: 90%;
     border-radius: 50px;
@@ -88,6 +89,11 @@ nav ul li {
     font-size: 1.5rem;
 }
 
+#logo b {
+    font-weight: 800;
+    background: transparent;
+}
+
 #nav-right-li {
     text-align: right;
     border: white solid 1px;
@@ -113,4 +119,43 @@ nav ul li {
 /*---------------------Main Styles-------------------------*/
 #landing-page-overlay {
     display: none;
+}
+
+
+#about-me-container img {
+    width: 100%;
+    min-height: 100vh;
+}
+
+#about-me-container h2 {
+    border: solid rgb(105 25 255) 1px;
+    border-radius: 50px;
+    padding: 0.3rem 1.5rem;
+    width: max-content;
+    color: rgb(105, 25, 255);
+    background: rgba(105, 25, 255, 0.1);
+    font-size: 1.2rem;
+}
+
+#about-me-container h3 {
+    font-weight: 600;
+}
+
+#about-me-container p {
+    font-size: 1rem;
+    line-height: 1.625rem;
+    color: #f1f1f1ba;
+}
+
+#about-me-container p b {
+    font-weight: 600;
+    color: #f1f1f1;
+}
+
+#work-experience-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
