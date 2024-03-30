@@ -26,7 +26,7 @@
                         </ul>
                     </div>
                     <div id="nav-center-logo" class="hidden-nav-background"><a id="logo" class="nav-links hidden-nav-background" href="#"><b>Design</b> Studios</a></div>
-                    <div id="nav-right-li" class="hidden-nav-background"><a class="nav-links hidden-nav-background">Say Hi</a></div>
+                    <div id="nav-right-li" class="hidden-nav-background"><a class="nav-links hidden-nav-background" href="#contact-me">Say Hi</a></div>
                 </div>
                 <div id="hamburger-menu" class="hidden-nav-background">
                     <span id="hamburger-line1"></span>
@@ -86,10 +86,19 @@
                     <div>
                         <h2>Contact</h2>
                         <h3>Got a problem to solve?</h3>
-                        <p>Get ready and tell me your ideas to develop your dream website.</p>
+                        <p>Get ready and tell me your ideas to develop your <b>dream website</b>.</p>
                     </div>
                     <div>
-                        <form></form>  <!--TODO: Create a contact form for user submission.-->
+                        <form action="" method="POST" id="contact-form">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+
+                            <button type="submit">Say Hi</button>
+                        </form> 
                     </div>
                 </div>
             </section>

@@ -114,6 +114,7 @@ nav ul li {
 }
 #nav-right-li a:hover {
     color: rgb(6, 9, 24);
+    font-size: 1.2rem;
     transition: ease-in 0.4s;
 }
 /*---------------------Main Styles-------------------------*/
@@ -121,13 +122,12 @@ nav ul li {
     display: none;
 }
 
-
 #about-me-container img {
     width: 100%;
     min-height: 100vh;
 }
 
-#about-me-container h2 {
+#about-me-container h2, #contact-me-container h2 {
     border: solid rgb(105 25 255) 1px;
     border-radius: 50px;
     padding: 0.3rem 1.5rem;
@@ -137,17 +137,18 @@ nav ul li {
     font-size: 1.2rem;
 }
 
-#about-me-container h3 {
+#about-me-container h3, #contact-me-container h3 {
     font-weight: 600;
 }
 
-#about-me-container p {
+#about-me-container p, #contact-me-container p {
     font-size: 1rem;
     line-height: 1.625rem;
     color: #f1f1f1ba;
 }
 
-#about-me-container p b {
+#about-me-container p b,
+#contact-me-container p b {
     font-weight: 600;
     color: #f1f1f1;
 }
@@ -158,4 +159,54 @@ nav ul li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#learning-certs-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    color: #f1f1f1ba;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 0.25rem;
+    border: solid rgb(105, 25, 255) 1px;
+    background: rgba(24, 33, 76, 0.5);
+}
+
+#contact-form button {
+    display: block;
+    margin-left: auto;
+    margin-top: 2rem;
+    border: solid rgb(6, 9, 24) 1px;
+    padding: 1rem 2rem;
+    color: rgb(6, 9, 24);
+    background: linear-gradient(to left, white 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position ease-in 0.5s, ease-in-out 0.5s;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-position: left bottom;
+    color: #fff;
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+    border: solid #fff 1px;
+}
+
+footer {
+    margin-top: 20rem;
 }

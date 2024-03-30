@@ -41,7 +41,7 @@
 }
 
 #hamburger-line1.active {
-    transform: translateY(0.6rem)rotate(45deg);
+    transform: translateY(0.4rem)rotate(45deg);
     z-index: 11;
 }
 #hamburger-line2.active {
@@ -49,7 +49,7 @@
     transition: opacity 0.5s ease-in-out;
 }
 #hamburger-line3.active {
-    transform: translateY(-0.3rem) rotate(-45deg);
+    transform: translateY(-0.4rem) rotate(-45deg);
     z-index: 11;
 }
 
@@ -98,20 +98,27 @@
     flex-direction: column;
 }
 
-#about-me-container h2 {
+#about-me-container h2, #contact-me-container h2 {
     margin: 25% 1.5rem 3rem;
     font-size: 0.8rem;
 }
 
-#about-me-container h3 {
+#about-me-container h3, #contact-me-container h3 {
     font-size: 1.4rem;
     margin-left: 3rem;
 }
 
-#about-me-container p {
+#about-me-container p, #contact-me-container p {
     margin: 1.2rem 3rem 1rem;
 }
 
-#work-experience-container {
-    
+#contact-me-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin-left: 5%;
+}
+
+#contact-form {
+    margin: 5% 0 2rem 3rem;
 }

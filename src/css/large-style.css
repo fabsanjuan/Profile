@@ -11,16 +11,16 @@
     grid-template-columns: 1fr 1fr;
 }
 
-#about-me-container h2 {
+#about-me-container h2, #contact-me-container h2 {
     margin: 33% 3rem 2rem;
 }
 
-#about-me-container h3 {
+#about-me-container h3, #contact-me-container h3 {
     font-size: 2rem;
     margin-left: 5rem;
 }
 
-#about-me-container p {
+#about-me-container p,  #contact-me-container p {
     margin: 1rem 5rem 0;
 }
 
@@ -41,9 +41,11 @@
 
 #contact-me-container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
+    max-width: 90%;
+    margin-left: 5%;
 }
 
-form {
-    padding: 5rem;
+#contact-form {
+    margin: 33% 0 2rem 3rem;
 }
