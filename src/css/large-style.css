@@ -11,13 +11,24 @@
     grid-template-columns: 1fr 1fr;
 }
 
-#about-me-container h2, #contact-me-container h2 {
+#about-me-container h2,
+#contact-me-container h2 {
     margin: 33% 3rem 2rem;
 }
 
-#about-me-container h3, #contact-me-container h3 {
+#work-experience-container h2,
+#learning-certs-container h2  {
+    margin: 10% 3rem 2rem;
+}
+
+#about-me-container h3,
+#contact-me-container h3 {
     font-size: 2rem;
     margin-left: 5rem;
+}
+
+#work-experience-container h3 {
+    font-size: 2rem;
 }
 
 #about-me-container p,  #contact-me-container p {

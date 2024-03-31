@@ -98,12 +98,18 @@
     flex-direction: column;
 }
 
-#about-me-container h2, #contact-me-container h2 {
+#about-me-container h2,
+#contact-me-container h2,
+#work-experience-container h2,
+#learning-certs-container h2{
     margin: 25% 1.5rem 3rem;
     font-size: 0.8rem;
 }
 
-#about-me-container h3, #contact-me-container h3 {
+#about-me-container h3,
+#contact-me-container h3,
+#work-experience-container h3,
+#learning-certs-container h3 {
     font-size: 1.4rem;
     margin-left: 3rem;
 }

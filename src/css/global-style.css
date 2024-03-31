@@ -127,7 +127,10 @@ nav ul li {
     min-height: 100vh;
 }
 
-#about-me-container h2, #contact-me-container h2 {
+#about-me-container h2, 
+#contact-me-container h2,
+#work-experience-container h2,
+#learning-certs-container h2 {
     border: solid rgb(105 25 255) 1px;
     border-radius: 50px;
     padding: 0.3rem 1.5rem;
@@ -137,11 +140,16 @@ nav ul li {
     font-size: 1.2rem;
 }
 
-#about-me-container h3, #contact-me-container h3 {
+#about-me-container h3, 
+#contact-me-container h3,
+#work-experience-container h3,
+#learning-certs-container h3 {
     font-weight: 600;
 }
 
-#about-me-container p, #contact-me-container p {
+#about-me-container p, 
+#contact-me-container p,
+#learning-certs-container p {
     font-size: 1rem;
     line-height: 1.625rem;
     color: #f1f1f1ba;
@@ -206,6 +214,38 @@ nav ul li {
     transition: ease-in-out 0.5s;
     border: solid #fff 1px;
 }
+
+/*-------------------Carousel-------------------------*/
+.carousel-container {
+    overflow: hidden;
+    width: 22rem;
+}
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.card {
+    min-width: 22rem;
+    margin-right: 1rem;
+}
+
+#work-experience img {
+    margin: 1.5rem 0;
+}
+
+#prevBtn, #nextBtn {
+    padding: 1rem;
+    cursor: pointer;
+    margin: 0.5rem 2rem;
+}
+
+
+
+
+
+
+
+/*--------------------------Footer-----------------------*/
 
 footer {
     margin-top: 20rem;
