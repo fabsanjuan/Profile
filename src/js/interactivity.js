@@ -1,5 +1,16 @@
 document.addEventListener('DOMContentLoaded', (event) => {
    const navBackground = document.querySelector('.hidden-nav-background'); 
+   const heading = document.getElementById('landing-page-overlay');
+   const h1Element = document.querySelector('#landing-page-overlay h1');
+   const pElement = document.querySelector('#landing-page-overlay p');
+   const btnElement = document.querySelector('#landing-page-overlay button');
+
+   // Variables for the carousel
+   const prevBtn = document.getElementById('prevBtn');
+   const nextBtn = document.getElementById('nextBtn');
+   const slide = document.querySelector('.carousel-slide');
+   const cards = document.querySelectorAll('.card');
+
     window.addEventListener('scroll', () => {
         let scrollPosition = window.scrollY;
         let windowHeight = window.innerHeight;
@@ -35,4 +46,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
             console.log(element);
         })
     })
+    // heading animations.
+    heading.classList.remove('animate-line'); // .remove does not throw an error - its failsafe.
+    h1Element.classList.remove('animate-drop-down');
+    pElement.classList.remove('animate-drop-down');
+    btnElement.classList.remove('animate-drop-down');
+    void heading.offsetWidth; // Trigger reflow and make the DOM Work For It!!
+    void h1Element.offsetWidth;
+    void pElement.offsetWidth;
+    void btnElement.offsetWidth;
+    heading.classList.add('animate-line');
+    h1Element.classList.add('animate-drop-down');
+    pElement.classList.add('animate-drop-down');
+    btnElement.classList.add('animate-drop-down');
 })

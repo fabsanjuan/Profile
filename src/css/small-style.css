@@ -128,3 +128,7 @@
 #contact-form {
     margin: 5% 0 2rem 3rem;
 }
+
+#landing-page-overlay {
+    display: none;
+}

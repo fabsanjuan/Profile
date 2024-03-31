@@ -119,8 +119,110 @@ nav ul li {
 }
 /*---------------------Main Styles-------------------------*/
 #landing-page-overlay {
-    display: none;
+    position: absolute;
+    top: 40%;
+    display: flex;
+    padding-top: 3rem;
+    gap: 1rem;
+    width: 100%;
+    background: rgba(244, 243, 247, 0);
 }
+
+#landing-page-overlay:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    transform: scaleX(0);
+    transform-origin: center;
+}
+
+@keyframes extendLine {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+#landing-page-overlay h1 {
+    background: none;
+    font-size: 4rem;
+    width: 50vw;
+    /* line-height: 97%; */
+    text-align: center;
+}
+
+#landing-page-overlay.animate-line:before {
+    animation: extendLine 1.5s ease-out forwards;
+}
+
+@keyframes dropDown {
+    from {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#landing-page-overlay h1, #landing-page-overlay button {
+    opacity: 0;
+}
+
+#landing-page-overlay p {
+    background: none;
+    font-size: 1.25rem;
+    width: 40vw;
+    opacity: 0;
+}
+
+#landing-page-overlay button {
+    margin: 6rem 2rem 0 -30rem;
+    border: solid rgb(6, 9, 24) 1px;
+    padding: 1rem 2rem;
+    color: rgb(6, 9, 24);
+    background: linear-gradient(to left, white 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position ease-in 0.5s, ease-in-out 0.5s;
+    cursor: pointer;
+}
+
+#landing-page-overlay button:hover {
+    background-position: left bottom;
+    color: #fff;
+    font-size: 1rem;
+    transition: ease-in-out 0.5s;
+    border: solid #fff 1px;
+}
+
+.animate-drop-down {
+    animation: dropDown 2s ease forwards;
+}
+
+#landing-page-overlay h1.animate-drop-down {
+    animation-delay: 1.75s;
+}
+
+#landing-page-overlay p.animate-drop-down {
+    animation-delay: 2.75s;
+}
+
+#landing-page-overlay button.animate-drop-down {
+    animation-delay: 4.25s;
+}
+
+#landing-page-overlay {
+    /* display: none; */
+}
+
 
 #about-me-container img {
     width: 100%;
