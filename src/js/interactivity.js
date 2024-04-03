@@ -8,8 +8,57 @@ document.addEventListener('DOMContentLoaded', (event) => {
    // Variables for the carousel
    const prevBtn = document.getElementById('prevBtn');
    const nextBtn = document.getElementById('nextBtn');
-   const slide = document.querySelector('.carousel-slide');
-   const cards = document.querySelectorAll('.card');
+   const slide = document.querySelector('#work-experience .carousel-slide');
+   const cards = document.querySelectorAll('#work-experience .card');
+   let carouselCounter = 0;
+   const carouselSize = cards[0].clientWidth + 16; // Card width + margin-right.
+
+   nextBtn.addEventListener('click', () => {
+    if (carouselCounter >= 2) {
+        return;
+    } 
+    slide.style.transition = "transform  0.5s ease-in-out";
+    carouselCounter++;
+    slide.style.transform = "translateX(" + (-carouselSize * carouselCounter) + "px)";
+   })
+
+   prevBtn.addEventListener('click', () => {
+    if (carouselCounter <= 0) return;
+    slide.style.transition = 'transform 0.5s ease-in-out';
+    carouselCounter--;
+    slide.style.transform = 'translateX(' + (-carouselSize * carouselCounter) + 'px)';
+   })
+
+   const slide2 = document.querySelector('#learning-certs .carousel-slide');
+   const cards2 = document.querySelectorAll('#learning-certs .card');
+   let isHovering = false;
+   let scrollInterval;
+
+   function cycleCards() {
+    if (!isHovering) {
+        const firstCard = slide2.children[0];
+        const clone = firstCard.cloneNode(true);
+        slide2.appendChild(clone);
+        slide2.removeChild(firstCard);
+    }
+   }
+   // Auto-scroll intervals
+   function startAutoScroll() {
+    scrollInterval = setInterval(cycleCards, 2000);
+   }
+   function stopAutoScroll() {
+    clearInterval(scrollInterval);
+   }
+
+   function attachHoverEvents(card) {
+    card.addEventListener('mouseover', stopAutoScroll);
+    card.addEventListener('mouseleave', startAutoScroll);
+   }
+   cards2.forEach(attachHoverEvents);
+   startAutoScroll();
+
+
+
 
     window.addEventListener('scroll', () => {
         let scrollPosition = window.scrollY;

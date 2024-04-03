@@ -21,7 +21,7 @@
                     <div id="drop-down-menu" class="hidden-nav-background">
                         <ul id="menu-li-container" class="hidden-nav-background">
                             <li class="nav-left-li hidden-nav-background"><a class="nav-links hidden-nav-background" href="#about-me" >About</a></li>
-                            <li class="nav-left-li hidden-nav-background"><a class="nav-links hidden-nav-background">Work</a></li>
+                            <li class="nav-left-li hidden-nav-background"><a class="nav-links hidden-nav-background" href="#work-experience">Work</a></li>
                             <li class="nav-left-li hidden-nav-background"><a class="nav-links hidden-nav-background">Experience</a></li>
                         </ul>
                     </div>
@@ -62,30 +62,39 @@
                 <div id="work-experience-container">
                     <h2>Work</h2>
                     <h3>Explore my universe</h3>
-                    <div class="carousel-container">
-                        <ul class="carousel-slide">  
-                            <li class="card">
-                                <a href="#" target="_blank" rel="noopener noreferrer">
-                                    <img src="./src/assets/images/dev-pic.jpg" alt="description of the projects" >  <!--TODO get screenshots of pages to display.-->
-                                </a>
-                            </li>
-                            <li class="card">
-                                <a href="#" target="_blank" rel="noopener noreferrer">
-                                    <img src="./src/assets/images/dev-pic.jpg" alt="description of the projects" >  <!--TODO get screenshots of pages to display.-->
-                                </a>
-                            </li>
-                            <li class="card">
-                                <a href="#" target="_blank" rel="noopener noreferrer">
-                                    <img src="./src/assets/images/dev-pic.jpg" alt="description of the projects" >  <!--TODO get screenshots of pages to display.-->
-                                </a>
-                            </li>  <!--TODO: Pick projects and display link.-->
-                        </ul>
+                    <div class="carousel-wrapper">
+                        <button id="prevBtn">&lt;</button>
+                        <div class="carousel-container">
+                            <ul class="carousel-slide">  
+                                <li class="card">
+                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                        <img src="./src/assets/images/dev-pic.jpg" alt="description of the projects" >  <!--TODO get screenshots of pages to display.-->
+                                        <div class="card-overlay">
+                                            <p class="card-title hidden-nav-background"><b class="hidden-nav-background">Project Title</b><br>Website</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="card">
+                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                        <img src="./src/assets/images/dev-pic.jpg" alt="description of the projects" >  <!--TODO get screenshots of pages to display.-->
+                                        <div class="card-overlay">
+                                            <p class="card-title hidden-nav-background"><b>Project Title</b><br>Website</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="card">
+                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                        <img src="./src/assets/images/dev-pic.jpg" alt="description of the projects" >  <!--TODO get screenshots of pages to display.-->
+                                        <div class="card-overlay">
+                                            <p class="card-title hidden-nav-background"><b>Project Title</b><br>Website</p>
+                                        </div>
+                                    </a>
+                                </li>  <!--TODO: Pick projects and display link.-->
+                            </ul>
+                        </div>
+                        <button id="nextBtn">&gt;</button>
                     </div>
-                    <div id="button-container">
-                        <button id="prevBtn">Prev</button>
-                        <button id="nextBtn">Next</button>
                     </div>
-                </div>
             </section>
             <section id="learning-certs">
                 <div id="learning-certs-container">
@@ -95,22 +104,22 @@
                     <div class="carousel-container">
                         <ul class="carousel-slide">  <!--TODO: Create a persistent slider with a speed hover effect-->
                             <li class="card">
-                                <p>employment and studies cards</p>
+                                <p>employment and studies cards 1</p>
+                                <p>employment and studies cards 1</p>
                             </li>  <!--TODO: Create the resume cards-->
                             <li class="card">
-                                <p>employment and studies cards</p>
+                                <p>employment and studies cards 2</p>
+                                <p>employment and studies cards 2</p>
                             </li>
                             <li class="card">
-                                <p>employment and studies cards</p>
+                                <p>employment and studies cards 3</p>
+                                <p>employment and studies cards 3</p>
                             </li>
                             <li class="card">
-                                <p>employment and studies cards</p>
+                                <p>employment and studies cards 4</p>
+                                <p>employment and studies cards 4</p>
                             </li>
                         </ul>
-                    </div>
-                    <div id="button-container">
-                        <button>Prev</button>
-                        <button>Next</button>
                     </div>
                 </div>
             </section>
