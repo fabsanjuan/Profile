@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
    const h1Element = document.querySelector('#landing-page-overlay h1');
    const pElement = document.querySelector('#landing-page-overlay p');
    const btnElement = document.querySelector('#landing-page-overlay button');
+   const workExp = document.getElementById('work-experience')
 
    // Variables for the carousel
    const prevBtn = document.getElementById('prevBtn');
@@ -30,34 +31,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
    })
 
    const slide2 = document.querySelector('#learning-certs .carousel-slide');
-   const cards2 = document.querySelectorAll('#learning-certs .card');
-   let isHovering = false;
-   let scrollInterval;
-
-   function cycleCards() {
-    if (!isHovering) {
-        const firstCard = slide2.children[0];
-        const clone = firstCard.cloneNode(true);
-        slide2.appendChild(clone);
-        slide2.removeChild(firstCard);
-    }
-   }
-   // Auto-scroll intervals
-   function startAutoScroll() {
-    scrollInterval = setInterval(cycleCards, 2000);
-   }
-   function stopAutoScroll() {
-    clearInterval(scrollInterval);
-   }
-
-   function attachHoverEvents(card) {
-    card.addEventListener('mouseover', stopAutoScroll);
-    card.addEventListener('mouseleave', startAutoScroll);
-   }
-   cards2.forEach(attachHoverEvents);
-   startAutoScroll();
-
-
+   
+   slide2.addEventListener('mouseover', () => {
+    slide2.style.animationPlayState = 'paused';
+    console.log('paused');
+   })
+   slide2.addEventListener('mouseleave', () => {
+    slide2.style.animationPlayState = 'running';
+    console.log('running');
+   })
 
 
     window.addEventListener('scroll', () => {
@@ -108,4 +90,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     h1Element.classList.add('animate-drop-down');
     pElement.classList.add('animate-drop-down');
     btnElement.classList.add('animate-drop-down');
+
+    btnElement.addEventListener('click', function() {
+        workExp.scrollIntoView({
+            behavior: 'smooth'
+        })
+    } )
 })

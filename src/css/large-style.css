@@ -27,7 +27,8 @@
     margin-left: 5rem;
 }
 
-#work-experience-container h3 {
+#work-experience-container h3,
+#learning-certs-container h3 {
     font-size: 2rem;
 }
 

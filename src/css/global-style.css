@@ -118,6 +118,13 @@ nav ul li {
     transition: ease-in 0.4s;
 }
 /*---------------------Main Styles-------------------------*/
+hr {
+    max-width: 90%;
+    color: rgb(151, 151, 151);
+    margin-left: 5%;
+    opacity: 0.2;
+}
+
 #landing-page-overlay {
     position: absolute;
     top: 40%;
@@ -288,7 +295,7 @@ nav ul li {
     max-width: 27rem;
     min-height: 40rem;
 }
-.carousel-slide {
+#work-experience .carousel-slide {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
@@ -371,13 +378,32 @@ nav ul li {
     align-items: center;
 }
 
-#learning-certs .card {
-    border: solid white 1px;
+#learning-certs .carousel-container {
+    height: 20rem;
 }
 
+#learning-certs .card {
+    border: solid white 1px;
+    border-radius: 20px;
+    flex: 0 0 auto;
+    min-width: 32rem;
+    min-height: 24rem;
+    margin-right: 1.2rem;
+    background: radial-gradient(circle 16rem at center, rgba(255, 255, 255, 0.25), rgb(6, 9, 24));
+}
 
+#learning-certs .carousel-slide {
+    display: flex;
+    animation: slide 20s linear infinite;
+}
 
-
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    } to {
+        transform: translateX(-50%); /* Adjust based on content width */
+    }
+}
 
 
 
