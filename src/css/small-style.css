@@ -77,22 +77,25 @@
     font-size: 1.75rem;
 }
 
-#menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    display: none;
-    z-index: 10;
-}
-
-#menu-overlay.active {
-    display: block;
-}
-
 /*---------------------Main Styles-------------------------*/
+#landing-page-overlay {
+    z-index: 0;
+}
+
+#landing-page-overlay h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+#landing-page-overlay p {
+    font-size: 0.825rem;
+}
+
+#landing-page-overlay button {
+    padding: 0.9rem 1.3rem;
+}
+
 #about-me-container {
     display: flex;
     flex-direction: column;
@@ -130,5 +133,23 @@
 }
 
 #landing-page-overlay {
+    /* display: none; */
+}
+
+
+
+/*------------------------Mobile Overlay--------------------------*/
+#menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
     display: none;
+    z-index: 10;
+}
+
+#menu-overlay.active {
+    display: block;
 }

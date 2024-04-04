@@ -32,6 +32,7 @@ a {
     left: 5%;
     width: 90%;
     border-radius: 50px;
+    z-index: 100;
 }
 
 .hidden-nav-background {
@@ -64,7 +65,7 @@ nav ul li {
 .nav-left-li a::after {
     content: '';
     position: absolute;
-    z-index: 9000;
+    z-index: 1000;
     width: 0;
     height: 2px;
     background: white;
@@ -86,12 +87,23 @@ nav ul li {
 }
 
 #logo {
+    display: inline-block;
     font-size: 1.5rem;
+    transform-origin: center;
+}
+
+#logo:hover {
+    animation: logoBounce 0.5s ease forwards;
 }
 
 #logo b {
     font-weight: 800;
     background: transparent;
+}
+
+@keyframes logoBounce {
+    0%, 100% {transform: rotateZ(0deg) scaleX(1) scaleY(1);}
+    50% {transform: rotateZ(-10deg) scaleX(1.1) scaleY(0.5);} 
 }
 
 #nav-right-li {
@@ -159,8 +171,8 @@ hr {
     background: none;
     font-size: 4rem;
     width: 50vw;
-    /* line-height: 97%; */
     text-align: center;
+    justify-content: left;
 }
 
 #landing-page-overlay.animate-line:before {
@@ -179,21 +191,29 @@ hr {
     }
 }
 
-#landing-page-overlay h1, #landing-page-overlay button {
+#landing-page-overlay h1, 
+#landing-page-overlay button,
+#landing-page-overlay p {
     opacity: 0;
+}
+
+#landing-page-desc {
+    display: flex;
+    flex-direction: column;
 }
 
 #landing-page-overlay p {
     background: none;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
+    font-weight: 400;
     width: 40vw;
-    opacity: 0;
 }
 
 #landing-page-overlay button {
-    margin: 6rem 2rem 0 -30rem;
+    margin: 3rem auto auto 0;
+    text-align: left;
     border: solid rgb(6, 9, 24) 1px;
-    padding: 1rem 2rem;
+    padding: 1.4rem 2.2rem;
     color: rgb(6, 9, 24);
     background: linear-gradient(to left, white 50%, transparent 50%);
     background-size: 200% 100%;

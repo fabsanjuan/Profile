@@ -3,16 +3,16 @@ import { MathUtils, BufferGeometry, Float32BufferAttribute, PointsMaterial, Poin
 function createParticles() {
     const particleCoords = [];
 
-    for (let i = 0; i < 2500; i++) {
-        const x = MathUtils.randFloatSpread(10);
-        const y = MathUtils.randFloatSpread(10);
-        const z = MathUtils.randFloatSpread(10);
+    for (let i = 0; i < 3000; i++) {
+        const x = MathUtils.randFloatSpread(15);
+        const y = MathUtils.randFloatSpread(15);
+        const z = MathUtils.randFloatSpread(15);
         particleCoords.push(x, y, z);
     }
 
     const geometry = new BufferGeometry();
     geometry.setAttribute('position', new Float32BufferAttribute(particleCoords, 3));
-    const material = new PointsMaterial({color: 'white', size: 0.01})
+    const material = new PointsMaterial({color: 'grey', size: 0.01})
     const particles = new Points(geometry, material);
 
     particles.tick = (delta) => {
