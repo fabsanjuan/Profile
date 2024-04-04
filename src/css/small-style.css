@@ -136,6 +136,9 @@
     /* display: none; */
 }
 
+.carousel-container {
+    width: 22rem;
+}
 
 
 /*------------------------Mobile Overlay--------------------------*/

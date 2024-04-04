@@ -1,4 +1,6 @@
 /*---------------------Generic Styles-------------------------*/
 
-/*---------------------Heading / Navbar-------------------------*/
-/* N/A for medium devices as navbar already responsive.
+/*---------------------Main Styles-------------------------*/
+.carousel-container {
+    width: 45rem;
+}

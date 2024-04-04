@@ -11,23 +11,42 @@ document.addEventListener('DOMContentLoaded', (event) => {
    const nextBtn = document.getElementById('nextBtn');
    const slide = document.querySelector('#work-experience .carousel-slide');
    const cards = document.querySelectorAll('#work-experience .card');
+   let windowWidth = window.innerWidth;
    let carouselCounter = 0;
+   let totalSwipes = 0;
    const carouselSize = cards[0].clientWidth + 16; // Card width + margin-right.
 
+   // size of window determines increments of carousel counter.
    nextBtn.addEventListener('click', () => {
-    if (carouselCounter >= 2) {
+    if (totalSwipes >= cards.length - 1) {
         return;
     } 
     slide.style.transition = "transform  0.5s ease-in-out";
     carouselCounter++;
     slide.style.transform = "translateX(" + (-carouselSize * carouselCounter) + "px)";
+    console.log(-carouselSize * carouselCounter);
+    console.log(totalSwipes);
+    if (windowWidth >= 1275) { 
+        totalSwipes += 2;
+    } else if (windowWidth >= 960) {
+        totalSwipes += 1.5;
+    } else {
+        totalSwipes++;
+    }
    })
 
    prevBtn.addEventListener('click', () => {
-    if (carouselCounter <= 0) return;
+    if (totalSwipes <= 0) return;
     slide.style.transition = 'transform 0.5s ease-in-out';
     carouselCounter--;
     slide.style.transform = 'translateX(' + (-carouselSize * carouselCounter) + 'px)';
+    if (windowWidth >= 1275) { 
+        totalSwipes += -2;
+    } else if (windowWidth >= 960) {
+        totalSwipes += -1.5;
+    } else {
+        totalSwipes--;
+    }
    })
 
    const slide2 = document.querySelector('#learning-certs .carousel-slide');
