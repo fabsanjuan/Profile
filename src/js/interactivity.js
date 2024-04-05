@@ -81,10 +81,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const line2 = document.getElementById('hamburger-line2');
     const line3 = document.getElementById('hamburger-line3');
     const navUL = document.querySelectorAll('.nav-left-li');
+    const navLinks = document.querySelectorAll('.nav-left-li .nav-links')
     const menuItems = document.getElementById('menu-li-container');
     const overlay = document.getElementById('menu-overlay');
 
-    hamburger.addEventListener('click', () => {
+    function toggleMenu() {
         hamburger.classList.toggle('active');
         menuItems.classList.toggle('active');
         overlay.classList.toggle('active');
@@ -93,9 +94,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
         line3.classList.toggle('active');
         navUL.forEach(element => {
             element.classList.toggle('active');
-            console.log(element);
         })
+    }
+    hamburger.addEventListener('click', toggleMenu);
+    navLinks.forEach(link => {
+        link.addEventListener('click', toggleMenu);
     })
+
     // heading animations.
     heading.classList.remove('animate-line'); // .remove does not throw an error - its failsafe.
     h1Element.classList.remove('animate-drop-down');

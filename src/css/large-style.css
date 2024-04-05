@@ -11,9 +11,12 @@
     grid-template-columns: 1fr 1fr;
 }
 
-#about-me-container h2,
-#contact-me-container h2 {
+#about-me-container h2 {
     margin: 33% 3rem 2rem;
+}
+
+#contact-me-container h2 {
+    margin: 25% 3rem 2rem;
 }
 
 #work-experience-container h2,

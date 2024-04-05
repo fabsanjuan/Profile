@@ -78,6 +78,10 @@
 }
 
 /*---------------------Main Styles-------------------------*/
+hr {
+    margin-top: 15%;
+}
+
 #landing-page-overlay {
     z-index: 0;
 }
@@ -101,11 +105,15 @@
     flex-direction: column;
 }
 
+#first-hr {
+    margin-top: 10%;
+}
+
 #about-me-container h2,
 #contact-me-container h2,
 #work-experience-container h2,
 #learning-certs-container h2{
-    margin: 25% 1.5rem 3rem;
+    margin: 18% 1.5rem 3rem;
     font-size: 0.8rem;
 }
 
@@ -140,6 +148,28 @@
     width: 22rem;
 }
 
+/*------------------------Footer Styles--------------------------*/
+footer {
+    margin-top: 10%;
+}
+
+footer h3 {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+footer ul {
+    padding-top: 0.5rem;
+}
+
+#last-hr {
+    margin-bottom: 6%;
+}
+
+.social-icons {
+    width: 24px;
+    height: 24px;
+}
 
 /*------------------------Mobile Overlay--------------------------*/
 #menu-overlay {
