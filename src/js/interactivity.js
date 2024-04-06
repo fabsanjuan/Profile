@@ -49,17 +49,44 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
    })
 
+   // Infinite loop carousel
    const slide2 = document.querySelector('#learning-certs .carousel-slide');
-   
-   slide2.addEventListener('mouseover', () => {
-    slide2.style.animationPlayState = 'paused';
-    console.log('paused');
-   })
-   slide2.addEventListener('mouseleave', () => {
-    slide2.style.animationPlayState = 'running';
-    console.log('running');
-   })
+   const certs = slide2.children;
+   const certsCount = certs.length;
+   let currentSliderPos = 0;
 
+   let isPaused = false;
+
+slide2.addEventListener('mouseover', () => {
+    isPaused = true;
+});
+
+slide2.addEventListener('mouseleave', () => {
+    isPaused = false;
+    requestAnimationFrame(animateCarousel); // Resume animation
+});
+
+   function adjustItemsOpacity() {
+    Array.from(certs).forEach((cert, index) => {
+        const opacity = 1 - Math.abs(index - (certsCount / 2)) / (certsCount) / 2;
+        cert.style.opacity = opacity.toString();
+    })
+   }
+   adjustItemsOpacity();
+
+   function infiniteCarousel() {
+    if (isPaused) return;
+    currentSliderPos -= 1;
+    if (currentSliderPos <= -100) {
+        currentSliderPos = 25;
+    }
+
+    slide2.style.transform = `translateX(${currentSliderPos}%)`;
+    requestAnimationFrame(infiniteCarousel);
+   }
+
+   // Initialize loop.
+   infiniteCarousel();
 
     window.addEventListener('scroll', () => {
         let scrollPosition = window.scrollY;

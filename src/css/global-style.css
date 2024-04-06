@@ -388,7 +388,6 @@ hr {
     opacity: 0.6;
 }
 
-
 #learning-certs-container {
     margin-top: 2rem;
     display: flex;
@@ -398,15 +397,16 @@ hr {
 }
 
 #learning-certs .carousel-container {
-    height: 20rem;
+    height: 25rem;
+    width: 100vw;
 }
 
 #learning-certs .card {
     border: solid white 1px;
     border-radius: 20px;
     flex: 0 0 auto;
-    min-width: 32rem;
-    min-height: 24rem;
+    min-width: 33rem;
+    min-height: 22rem;
     margin-right: 1.2rem;
     background: radial-gradient(circle 16rem at center, rgba(255, 255, 255, 0.25), rgb(6, 9, 24));
 }
@@ -418,12 +418,11 @@ hr {
 
 @keyframes slide {
     from {
-        transform: translateX(0);
+        transform: translateX(25%);
     } to {
-        transform: translateX(-50%); 
+        transform: translateX(-100%); 
     }
 }
-
 
 #contact-form label {
     display: block;
