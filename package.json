@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/fabsanjuan/Profile/issues"
   },
-  "homepage": "https://github.com/fabsanjuan/Profile#readme",
+  "homepage": "https://github.com/fabsanjuan/Profile",
   "dependencies": {
     "gh-pages": "^6.1.1",
     "three": "^0.162.0"
