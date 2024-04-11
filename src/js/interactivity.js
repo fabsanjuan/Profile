@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-   const navBackground = document.querySelector('.hidden-nav-background'); 
+   const navBackground = document.querySelector('.hidden-background'); 
    const heading = document.getElementById('landing-page-overlay');
    const h1Element = document.querySelector('#landing-page-overlay h1');
    const pElement = document.querySelector('#landing-page-overlay p');
@@ -51,43 +51,50 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
    // Infinite loop carousel
    const slide2 = document.querySelector('#learning-certs .carousel-slide');
-   const certs = slide2.children;
-   const certsCount = certs.length;
-   let currentSliderPos = 0;
-
-   let isPaused = false;
-
-slide2.addEventListener('mouseover', () => {
-    isPaused = true;
-});
-
-slide2.addEventListener('mouseleave', () => {
-    isPaused = false;
-    requestAnimationFrame(animateCarousel); // Resume animation
-});
-
-   function adjustItemsOpacity() {
-    Array.from(certs).forEach((cert, index) => {
-        const opacity = 1 - Math.abs(index - (certsCount / 2)) / (certsCount) / 2;
-        cert.style.opacity = opacity.toString();
-    })
-   }
-   adjustItemsOpacity();
-
-   function infiniteCarousel() {
-    if (isPaused) return;
-    currentSliderPos -= 1;
-    if (currentSliderPos <= -100) {
-        currentSliderPos = 25;
+   const certs = document.querySelectorAll('#learning-certs .card')
+   let moving = false;
+   let animating = true;
+   let positionX = 0;
+   const moveSpeed = 1;
+   
+   function moveSlide() {
+    if (!animating || moving) return;
+    positionX += -moveSpeed; // Move slide to the left
+    slide.style.transition = 'transform 0s linear';
+    slide2.style.transform = `translateX(${positionX}px)`;
     }
 
-    slide2.style.transform = `translateX(${currentSliderPos}%)`;
-    requestAnimationFrame(infiniteCarousel);
-   }
+    function resetSlideIfNeeded() {
+        const firstCard = slide2.firstElementChild;
+        const firstCardWidth = firstCard.offsetWidth;
+        if (Math.abs(positionX) >= firstCardWidth + 100) {
+            moving = true;
+            slide2.appendChild(firstCard); // Move the first card to the end
+            positionX += firstCardWidth; // Adjust position
+            slide2.style.transition = 'none';
+            slide2.style.transform = `translateX(${positionX}px)`;
+            requestAnimationFrame(() => {
+                slide.style.transition = 'transform 0.5s linear';
+            })
+            moving = false;
+        }
+    }
 
-   // Initialize loop.
-   infiniteCarousel();
+    function animate() {
+        moveSlide();
+        resetSlideIfNeeded();
+        requestAnimationFrame(animate);
+    }
 
+    // Add mouseover and mouseleave event listeners to control animation
+    slide2.addEventListener('mouseover', () => animating = false);
+    slide2.addEventListener('mouseleave', () => animating = true);
+
+    // Start the animation
+    requestAnimationFrame(animate);
+
+
+    // Scroll navbar menu background.
     window.addEventListener('scroll', () => {
         let scrollPosition = window.scrollY;
         let windowHeight = window.innerHeight;

@@ -35,7 +35,7 @@ a {
     z-index: 100;
 }
 
-.hidden-nav-background {
+.hidden-background {
     background: rgba(6, 9, 24, 0);
 }
 
@@ -398,22 +398,23 @@ hr {
 
 #learning-certs .carousel-container {
     height: 25rem;
-    width: 100vw;
+    width: 100%;
 }
 
 #learning-certs .card {
+    position: relative;
     border: solid white 1px;
     border-radius: 20px;
     flex: 0 0 auto;
-    min-width: 33rem;
+    max-width: 38rem;
     min-height: 22rem;
-    margin-right: 1.2rem;
-    background: radial-gradient(circle 16rem at center, rgba(255, 255, 255, 0.25), rgb(6, 9, 24));
+    margin-right: 2.5rem;
+    background: radial-gradient(circle 16rem at center, rgba(255, 255, 255, 0.12), rgb(6, 9, 24));
 }
 
 #learning-certs .carousel-slide {
     display: flex;
-    animation: slide 20s linear infinite;
+    /* animation: slide 35s linear infinite; */
 }
 
 @keyframes slide {
@@ -422,6 +423,39 @@ hr {
     } to {
         transform: translateX(-100%); 
     }
+}
+
+#learning-certs .carousel-slide p {
+    padding: 1rem 1.5rem 0;
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+#learning-certs .card-tags {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+}
+
+#learning-certs .card br {
+    height: 1rem;
+}
+
+#learning-certs .card-tags img {
+    height: 3rem;
+    width: 3rem;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+}
+
+#learning-certs .card-tags em {
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+#learning-certs .card-tags p {
+    font-size: 0.85rem;
+    padding-bottom: 1rem;
 }
 
 #contact-form label {

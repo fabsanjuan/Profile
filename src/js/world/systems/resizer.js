@@ -1,8 +1,8 @@
 const setSize = (container, camera, renderer) => {
     camera.aspect = container.clientWidth / container.clientHeight;  // Set camera aspect ratio.
-        camera.updateProjectionMatrix();  // Updates the camera frustum.
-        renderer.setSize(container.clientWidth, container.clientHeight);  // Set canvas width and height.
-        renderer.setPixelRatio(window.devicePixelRatio);  // Set pixel ratio for mobile devices.
+    camera.updateProjectionMatrix();  // Updates the camera frustum.
+    renderer.setSize(container.clientWidth, container.clientHeight);  // Set canvas width and height.
+    renderer.setPixelRatio(window.devicePixelRatio);  // Set pixel ratio for mobile devices.
 };
 
 class Resizer {
