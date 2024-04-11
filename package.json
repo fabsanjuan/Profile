@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fabsanjuan/Profile.git"
+    "url": "git+https://github.com/fabsanjuan/profile.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fabsanjuan/Profile/issues"
+    "url": "https://github.com/fabsanjuan/profile/issues"
   },
-  "homepage": "https://github.com/fabsanjuan/Profile",
+  "homepage": "https://github.com/fabsanjuan/profile",
   "dependencies": {
     "gh-pages": "^6.1.1",
     "three": "^0.162.0"
