@@ -14,7 +14,7 @@
 }
 
 #nav-right-li a {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
 }
 
 #nav-right-li a:hover {
@@ -82,7 +82,7 @@
 .nav-left-li.active a {
     padding: 1rem;
     margin: 0.5rem;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 /*---------------------Main Styles-------------------------*/
@@ -95,13 +95,13 @@ hr {
 }
 
 #landing-page-overlay h1 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 600;
     z-index: 1;
 }
 
 #landing-page-overlay p {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
 }
 
 #landing-page-overlay button {
@@ -126,9 +126,13 @@ hr {
 #about-me-container h2,
 #contact-me-container h2,
 #work-experience-container h2,
-#learning-certs-container h2{
+#learning-certs-container h2 {
     margin: 18% 1.5rem 3rem;
     font-size: 0.8rem;
+}
+
+#work-experience-container h3 {
+    margin-bottom: 0.5rem;
 }
 
 #about-me-container h3,
@@ -142,6 +146,10 @@ hr {
 #about-me-container p, #contact-me-container p {
     margin: 1.2rem 3rem 1rem;
     font-size: 0.7rem;
+}
+
+#learning-certs-container h3 {
+    margin-bottom: 4rem;
 }
 
 #contact-me-container {
