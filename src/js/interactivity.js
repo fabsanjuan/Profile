@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     slide.style.transition = "transform  0.5s ease-in-out";
     carouselCounter++;
     slide.style.transform = "translateX(" + (-carouselSize * carouselCounter) + "px)";
-    console.log(-carouselSize * carouselCounter);
-    console.log(totalSwipes);
+    // console.log(-carouselSize * carouselCounter);
+    // console.log(totalSwipes);
     if (windowWidth >= 1275) { 
         totalSwipes += 2;
     } else if (windowWidth >= 960) {
