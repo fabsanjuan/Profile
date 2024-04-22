@@ -20,7 +20,7 @@
                 <div id="nav-item-container" class=" hidden-background">
                     <div id="drop-down-menu" class="hidden-background">
                         <ul id="menu-li-container" class="hidden-background">
-                            <li class="nav-left-li hidden-background"><a class="nav-links hidden-background" href="#about-me" >About</a></li>
+                            <li class="nav-left-li hidden-background"><a class="nav-links hidden-background" href="#about-me-inner-link" >About</a></li>
                             <li class="nav-left-li hidden-background"><a class="nav-links hidden-background" href="#work-experience">Work</a></li>
                             <li class="nav-left-li hidden-background"><a class="nav-links hidden-background" href="#learning-certs">Experience</a></li>
                         </ul>
@@ -53,7 +53,7 @@
                     <div>
                         <img src="./src/assets/images/dev-pic.jpg" alt="dev-pic"/>  <!--TODO: Include a personal profile picture.-->
                     </div>
-                    <div>
+                    <div id="about-me-inner-link">
                         <h2 class="about-me-items">About</h2>
                         <h3 class="about-me-items">Developer, Problem Solver.</h3>
                         <p class="about-me-items">I am a passionate software developer from the rainy but vibrant city Vancouver, Canada. Welcome to Design Studios, bringing you cutting-edge <b>web development and design from the future</b>. My mission is to transcend traditional expectations and push the limits of what I can achieve by developing the next generation of websites and web applications.</p>
@@ -194,7 +194,7 @@
                         <p>Share your vision with me to craft your <b>dream website</b>.</p>
                     </div>
                     <div>
-                        <form action="" method="POST" id="contact-form">
+                        <form  id="contact-form" accept-charset="utf-8" action="https://formspree.io/f/xjvnjarb" method="POST">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
                             <label for="email">Email</label>
